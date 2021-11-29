@@ -1,0 +1,569 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+/*----------------------١-----------------------*/
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+/*---------------------------------------------*/
+
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+/*----------------------------------------------*/
+
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+.button {
+  font-size: 17px;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 50px;
+  font-weight: bold;
+  width: 180px;
+  padding: 18px;
+  border: none;
+}
+.is-primary {
+  background-color: #0505bf;
+  color: white;
+  display: inline-block;
+}
+.is-secondary {
+  background-color: white;
+  color: #0505bf;
+  display: inline-block;
+  margin-right: 5px;
+}
+.is-outline {
+  background-color: #0505bf;
+  border: 1px solid white;
+  color: white;
+  display: inline-block;
+  margin-left: 5px;
+}
+/*----------------------------------------------*/
+
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة           */
+.container {
+  width: 1170px;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/*----------------------------------------------*/
+
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+header {
+  padding: 16px 0;
+  margin-bottom: 115px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+}
+.logo {
+  width: 50%;
+  display: flex;
+}
+.is-visible-mobile {
+  visibility: hidden;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.main-nav li {
+  margin-left: 25px;
+}
+.main-nav a {
+  font-size: 21px;
+  color: black;
+}
+/*----------------------------------------------*/
+
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+.hero {
+  margin-bottom: 70px;
+}
+.hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .hero__desc {
+  width: 33%;
+  margin-top: 20px;
+}
+.hero .hero__image {
+  width: calc(100% - 33%);
+}
+.hero .hero__image img {
+  width: 100%;
+}
+.hero .container h1 {
+  font-size: 46px;
+  font-weight: 900;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+}
+.hero .container p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 23px;
+}
+.hero .container a {
+  border: var(--main-btn);
+}
+/*----------------------------------------------*/
+
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+.meetYourMatch {
+  margin-top: 150px;
+  position: relative;
+}
+.meetYourMatch__background {
+  position: absolute;
+  width: 87%;
+  height: 60%;
+  background-color: #ecfbf6;
+  border-radius: 20px;
+  z-index: -1;
+}
+.meetYourMatchــcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.meetYourMatchــcontent h2 {
+  margin: 70px 0 40px;
+  font-size: 40px;
+}
+.meetYourMatchــform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.switcher {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-bottom: 35px;
+}
+.switcher label {
+  cursor: pointer;
+  margin: 0 29px;
+}
+#cat {
+  position: absolute;
+  top: 28px;
+  right: 51px;
+  z-index: -1;
+}
+#dog {
+  position: absolute;
+  top: 26px;
+  right: 213px;
+  z-index: -1;
+}
+.switcher span {
+  text-transform: uppercase;
+  color: #acacac;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  /* position: relative; */
+  margin: 30px 0;
+}
+.form-group input {
+  position: absolute;
+  width: 356px;
+  right: 13px;
+  padding: 19px;
+  border: 1px solid blue;
+  border-radius: 50px;
+  z-index: -1;
+}
+.form-group button {
+  position: absolute;
+  display: inline-block;
+  right: -110px;
+}
+.is-searchResults {
+  margin-bottom: 100px;
+}
+.widgets {
+  gap: 40px;
+  display: flex;
+  padding-bottom: 120px;
+}
+.is-searchResults .widget {
+  background-color: white;
+  box-shadow: 0px 20px 82px #ddd;
+}
+.is-searchResults .widget__desc {
+  padding: 20px;
+}
+/*----------------------------------------------*/
+
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+.howItWorks {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.howItWorks h2 {
+  margin-bottom: 70px;
+  font-size: 36px;
+}
+.howItWorks h3 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: normal;
+}
+.howItWorks p {
+  font-size: 18px;
+  color: #bfbfbf;
+}
+.howItWorks .widget__desc {
+  margin-top: 15px;
+}
+/*----------------------------------------------*/
+
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+.stories {
+  background-color: #ecfbf6;
+}
+
+.stories h2 {
+  text-align: center;
+  padding: 70px 0 30px;
+  font-size: 30px;
+}
+
+.heading-paragraph {
+  text-align: center;
+  padding: 0 292px 30px;
+  font-size: 19px;
+  color: #bfbfbf;
+}
+
+.stories .widget__desc h3 {
+  padding: 15px 0 10px;
+  font-weight: normal;
+  font-size: 18px;
+}
+/*----------------------------------------------*/
+
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+.actions {
+  background-color: #0505bf;
+  text-align: center;
+  padding: 100px;
+  display: flex;
+}
+.actions h2 {
+  color: white;
+  font-size: 37px;
+  margin-bottom: 30px;
+}
+/*----------------------------------------------*/
+
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+footer {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+footer .container {
+  display: flex;
+}
+.footer-nav {
+  display: flex;
+}
+.copyrights {
+  padding-right: 250px;
+}
+.copyrights img {
+  padding-bottom: 20px;
+}
+.copyrights p {
+  margin-bottom: 18px;
+}
+.footer-nav .item {
+  padding-right: 70px;
+}
+.footer-nav .item h5 {
+  font-weight: bold;
+  font-size: 19px;
+  padding: 0 0 20px;
+}
+.footer-nav .item li {
+  margin-bottom: 18px;
+}
+/*----------------------------------------------*/
+
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 750px;
+    padding: 0 auto;
+    margin: 0 auto;
+  }
+  header {
+    margin-bottom: 82px;
+  }
+  header .container {
+    border-bottom: none;
+  }
+  .main-nav a {
+    font-size: 16px;
+  }
+  .hero .hero__desc {
+    width: 50%;
+  }
+  .hero .hero__image {
+    width: 50%;
+  }
+  .hero .hero__image img {
+    width: 86%;
+  }
+  .meetYourMatch {
+    margin-top: 0px;
+    position: relative;
+  }
+  .meetYourMatch__background {
+    height: 34%;
+  }
+  .meetYourMatchــcontent .widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .howItWorks .widgets {
+    flex-direction: column;
+  }
+  .howItWorks .widget__desc {
+    padding: 0px;
+  }
+  .heading-paragraph {
+    padding: 0 93px 30px;
+  }
+  .stories .widgets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .stories .widget {
+    width: 100%;
+  }
+  .stories .widget__image img {
+    width: 100%;
+  }
+  .copyrights {
+    padding-right: 110px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header {
+    margin-bottom: 34px;
+  }
+  .container {
+    width: 368px;
+    padding: 0 auto;
+    margin: 0 auto;
+  }
+  .main-nav {
+    display: none;
+  }
+  .is-visible-mobile {
+    visibility: visible;
+    cursor: pointer;
+  }
+  .burger {
+    width: 7%;
+    height: 3px;
+    background-color: black;
+    border: none;
+    position: relative;
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+  }
+  .burger::before {
+    top: 6px;
+  }
+  .burger::after {
+    top: -6px;
+  }
+  .hero {
+    margin-bottom: 0;
+  }
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .hero__desc {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .hero .hero__image {
+    width: 100%;
+  }
+  .meetYourMatch {
+    position: relative;
+    margin-top: 0;
+  }
+  .meetYourMatch__background {
+    width: 100%;
+    height: 20%;
+    background-color: #ecfbf6;
+    border-radius: 0 0 20px 20px;
+    left: 0px;
+  }
+  .meetYourMatchــform {
+    margin-bottom: 39px;
+  }
+  .meetYourMatchــcontent h2 {
+    font-size: 30px;
+  }
+  .switcher label {
+    margin: 0 13px;
+  }
+  #dog {
+    right: 157px;
+  }
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+  }
+  .form-group button {
+    right: -76px;
+  }
+  .form-group input {
+    right: -73px;
+  }
+  .meetYourMatchــcontent .widgets {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .widgets {
+    padding-bottom: 0;
+  }
+  .is-searchResults .widget__image img {
+    min-width: 100%;
+  }
+  .widget__desc {
+    padding: 0;
+  }
+  .heading-paragraph {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  .stories a {
+    color: #0505bf;
+  }
+  .actions {
+    padding: 50px 0;
+  }
+  .stories .widgets {
+    display: flex;
+    flex-direction: column;
+  }
+  .actions h2 {
+    font-size: 31px;
+  }
+  .actions .is-secondary {
+    margin-right: 0;
+  }
+  .actions .is-outline {
+    margin-left: 0;
+  }
+  .is-outline {
+    border: 2px solid white;
+  }
+  footer {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  footer .container {
+    flex-direction: column;
+  }
+  .copyrights {
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+  .footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+
+  .footer-nav .item {
+    padding-right: 0;
+  }
+}
+
+/*----------------------------------------------*/
